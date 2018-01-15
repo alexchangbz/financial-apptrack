@@ -1,5 +1,7 @@
 <h1>My Portfolio</h1>
 
+<p><%=link_to "Homepage", root_path %></p>
+
 <h3>Search for Stocks</h3>
 <div id="stock-lookup">
   <%= form_tag search_stocks_path, remote: true, method: :get, id: "stock-lookup-form" do %>
@@ -20,3 +22,5 @@
 <div id="results">
   <%= render 'users/result' %>
 </div>
+
+<%= render 'stocks/list' %>
